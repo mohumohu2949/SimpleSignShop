@@ -4,10 +4,15 @@
 #
 # @within tag/function minecraft:reload
 
-# 必要なスコアボード
+#> Scoreboard
     scoreboard objectives add point dummy "ポイント"
     scoreboard objectives add sss dummy
     tag mohumohu2949 add mohu
+
+#> シュルカー読み込み
+    execute in overworld run forceload add 2949 2949
+#> シュルカー設置
+    execute in overworld unless block 2949 -64 2949 minecraft:white_shulker_box run setblock 2949 -64 2949 white_shulker_box
 
 #> Storage
 # @within function sss:**

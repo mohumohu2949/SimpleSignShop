@@ -5,9 +5,9 @@
 # @within function sss:setting/modify/buy
 
 # アイテム投下
-    execute positioned ~ ~1 ~ run item replace block 588 71 -547 container.0 from entity @e[type=item_frame,sort=nearest,limit=1] container.0
+    execute in overworld positioned ~ ~1 ~ run item replace block 2949 -64 2949 container.0 from entity @e[type=item_frame,sort=nearest,limit=1] container.0
 # data modify
-    $data modify block 588 71 -547 Items[0].Count set value $(Count)
+    $execute in overworld run data modify block 2949 -64 2949 Items[0].Count set value $(Count)
 
 # マクロめんどいのでスコア移動
     $scoreboard players set _ sss $(value)
